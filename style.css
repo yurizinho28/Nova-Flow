@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    /* fontes */
+    --fonte-primaria: "Plus Jakarta Sans", sans-serif;
+    --fonte-secundaria: "Inter", sans-serif;
+
+    /* cores */
+    --primaria: hsl(243, 75%, 59%);
+    --secundaria: hsl(258, 90%, 66%);
+    --terciaria: hsl(160, 84%, 39%);
+    --neutra: hsl(222, 47%, 11%);
+}
+
+/* classes utilitárias */
+
+.animate {
+    animation-duration: 2s;
+}
+
+.animate-blink {
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+.animation-grow-fade-out {
+    animation-name: grow-fade-out;
+    animation-iteration-count: infinite;
+}
+
+/* animações */
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes grow-fade-out {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+
+}
